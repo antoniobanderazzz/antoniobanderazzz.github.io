@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		
+		function Play(){
+			var answer = parseInt(Math.random() * 10);
+
+			while(true){
+				var ans1 = prompt('Игрок1, введите число:');
+				if (ans1 > answer) {
+					alert('Чиcло слишкком большое! Переход хода');
+					var ans2 = prompt('Игрок2, введите число:');
+					if (ans2 > answer) {
+						alert('Чиcло слишкком большое! Переход хода');
+					}
+					else if (ans2 < answer) {
+						alert('Чиcло слишкком маленькое! Переход хода');
+					}
+					else if (ans2 == answer) {
+						alert('Игрок 2 угадал. Игра окончена.');
+						break;
+					}
+				}
+				else if (ans1 < answer) {
+					alert('Чиcло слишкком большое! Переход хода');
+					var ans2 = prompt('Игрок2, введите число:');
+					if (ans2 > answer) {
+						alert('Чиcло слишкком большое! Переход хода');
+					}
+					else if (ans2 < answer) {
+						alert('Чиcло слишкком маленькое! Переход хода');
+					}
+					else if (ans2 == answer) {
+						alert('Игрок 2 угадал. Игра окончена.');
+						break;
+					}
+				}
+				else if (ans1 == answer) {
+					alert('Игрок 1 угадал. Игра окончена.');
+						break;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="puzzle.html">Загадки</a><span>/</span>
+		<a href="guess.html">Угадайка</a><span>/</span>
+		<a href="#">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+	<div id="center">
+		<h3>Угадайка Мультиплеер</h3>
+		<div id="box">
+			<p>Играет 2 Игрока с неограниченным количеством попыток!</p>
+			<br></br>
+			<a href="#" onclick="Play();">Играть</a>
+
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
